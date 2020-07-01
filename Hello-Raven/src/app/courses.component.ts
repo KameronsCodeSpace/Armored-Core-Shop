@@ -10,11 +10,12 @@ import { CoursesService } from './courses.service';
                 {{ course }}
             </li>
         </ul>
-        <button class="btn btn-primary">Save</button>
+        <button class="btn btn-primary" [class.active]="isActive">Save</button>
     `
 })
 
 export class CoursesComponent {
+    isActive = true;
     title = "List of Courses"
     courses;
 
